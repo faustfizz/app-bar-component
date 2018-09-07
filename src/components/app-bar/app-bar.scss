@@ -1,0 +1,79 @@
+app-bar {
+  min-height: 56px;
+  height: 56px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 10;
+
+  .app-bar-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    .solid-bar {
+        height: 100%;
+        min-width: 16px;
+        background-color: color($colors, primary);
+        filter: drop-shadow(0 0 4px #666);
+    }
+    .border-left-bar {
+      z-index: 1;
+      min-width: 8px;
+      background-color: color($colors, primary);
+      border-top-right-radius: 8px;
+    }
+    .border-right-bar {
+      min-width: 8px;
+      z-index: 1;
+      background-color: color($colors, primary);
+      border-top-left-radius: 8px
+    }
+    .button-bar {
+      min-width: 68px;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      background-color: color($colors, primary);
+
+      .fab-button {
+        position: absolute;
+        height: 56px;
+        width: 56px;
+        filter: drop-shadow(0 0 4px #666);
+        background: color($colors, accent);
+        border-radius: 50%;
+        margin-top: -66px;
+        margin-left: 6px;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 2;
+        p {
+          font-weight: 400;
+          font-size: 30px;
+          color: white;
+        }
+        &:active {
+          background: rgba($color: color($colors, accent), $alpha: 0.9)
+        }
+      }
+    }
+
+    .button-bar:before{
+      background: white;
+      height: 36px;
+      min-width: 68px;
+      border-radius: 0px 0px 36px 36px / 0 0px 36px 36px;
+      display: inline-block;
+      content: '';
+  }
+
+}
+  .flexible {
+    flex-grow: 1;
+  }
+
+}
