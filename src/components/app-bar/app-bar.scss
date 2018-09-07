@@ -5,7 +5,10 @@ app-bar {
   display: flex;
   position: relative;
   z-index: 10;
-
+  .toolbar-background-md {
+    border-color: transparent;
+    background: transparent;
+}
   .app-bar-container {
       height: 100%;
       width: 100%;
@@ -40,8 +43,8 @@ app-bar {
         position: absolute;
         height: 56px;
         width: 56px;
-        filter: drop-shadow(0 0 4px #666);
         background: color($colors, accent);
+        filter: drop-shadow(0 0 4px #666);
         border-radius: 50%;
         margin-top: -66px;
         margin-left: 6px;
@@ -57,7 +60,7 @@ app-bar {
           color: white;
         }
         &:active {
-          background: rgba($color: color($colors, accent), $alpha: 0.9)
+          background: rgba($color: color($colors, accent), $alpha: 0.8)
         }
       }
     }
